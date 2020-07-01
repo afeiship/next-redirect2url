@@ -2,8 +2,8 @@
  * name: @feizheng/next-redirect2url
  * description: Redirect url encode/decode.
  * homepage: https://github.com/afeiship/next-redirect2url
- * version: 1.0.1
- * date: 2020-07-01T06:23:42.044Z
+ * version: 1.0.2
+ * date: 2020-07-01T10:40:28.838Z
  * license: MIT
  */
 
@@ -44,7 +44,7 @@
         var target = qs[options.query];
         var source = url.substring(0, url.indexOf('?'));
 
-        return { target: target, source: source, };
+        return { target: target, source: source };
       }
     }
   });

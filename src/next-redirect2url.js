@@ -35,7 +35,7 @@
         var target = qs[options.query];
         var source = url.substring(0, url.indexOf('?'));
 
-        return { target: target, source: source, };
+        return { target: target, source: source };
       }
     }
   });
