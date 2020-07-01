@@ -12,10 +12,27 @@ npm install -S @feizheng/next-redirect2url
 ```
 
 ## apis
-| api | params | description   |
-|-----|--------|---------------|
+| api    | params | description   |
+| ------ | ------ | ------------- |
 | encode | -      | desc balabala |
 | decode | -      | desc balabala |
+
+## options - encode
+| name   | default            | description                      |
+| ------ | ------------------ | -------------------------------- |
+| query  | 'rediect'          | The query key string             |
+| encode | encodeURIComponent | The default value encode method. |
+| source | -                  | The url.                         |
+| target | -                  | The redirect url.                |
+
+
+## options - decode
+
+| name   | default            | description                      |
+| ------ | ------------------ | -------------------------------- |
+| query  | 'rediect'          | The query key string             |
+| decode | decodeURIComponent | The default value decode method. |
+| url    | -                  | The target url.                  |
 
 ## usage
 ```js
@@ -31,7 +48,6 @@ const str = NxRedirect2url.encode({
 
 const res = NxRedirect2url.decode({
   url: 'http://192.168.50.181/login?redirect=https%3A%2F%2Fwww.mipengine.org%3Fq1%3D1%26q2%3D2',
-  query:'redirect'
 });
 
 /*

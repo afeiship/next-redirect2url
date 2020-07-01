@@ -2,8 +2,8 @@
  * name: @feizheng/next-redirect2url
  * description: Redirect url encode/decode.
  * homepage: https://github.com/afeiship/next-redirect2url
- * version: 1.0.0
- * date: 2020-07-01T06:14:55.873Z
+ * version: 1.0.1
+ * date: 2020-07-01T06:19:47.978Z
  * license: MIT
  */
 
@@ -12,10 +12,8 @@
   var nx = global.nx || require('@feizheng/next-js-core2');
   var nxParam = nx.param || require('@feizheng/next-param');
   var nxHashlize = nx.hashlize || require('@feizheng/next-hashlize');
-  var RETURN_VALUE = function (value) { return value; };
   var DEFAULT_OPTIONS = {
     query: 'redirect',
-    transform: RETURN_VALUE,
   };
 
   var NxRedirect2url = nx.declare('nx.Redirect2url', {
@@ -30,13 +28,11 @@
 
         query[options.query] = options.target;
 
-        return options.transform(
-          nxParam(
-            query,
-            options.source,
-            { encode: options.encode }
-          )
-        );
+        return nxParam(
+          query,
+          options.source,
+          { encode: options.encode }
+        )
       },
       decode: function (inOptions) {
         var options = nx.mix({

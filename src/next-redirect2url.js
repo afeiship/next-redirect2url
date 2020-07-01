@@ -3,10 +3,8 @@
   var nx = global.nx || require('@feizheng/next-js-core2');
   var nxParam = nx.param || require('@feizheng/next-param');
   var nxHashlize = nx.hashlize || require('@feizheng/next-hashlize');
-  var RETURN_VALUE = function (value) { return value; };
   var DEFAULT_OPTIONS = {
     query: 'redirect',
-    transform: RETURN_VALUE,
   };
 
   var NxRedirect2url = nx.declare('nx.Redirect2url', {
@@ -21,13 +19,11 @@
 
         query[options.query] = options.target;
 
-        return options.transform(
-          nxParam(
-            query,
-            options.source,
-            { encode: options.encode }
-          )
-        );
+        return nxParam(
+          query,
+          options.source,
+          { encode: options.encode }
+        )
       },
       decode: function (inOptions) {
         var options = nx.mix({

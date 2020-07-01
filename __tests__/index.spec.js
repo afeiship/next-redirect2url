@@ -12,13 +12,13 @@
       expect(str).toBe('http://192.168.50.181/login?redirect=https%3A%2F%2Fwww.mipengine.org%3Fq1%3D1%26q2%3D2');
     });
 
-    test.only('decode', ()=>{
+    test('decode', ()=>{
       var res = NxRedirect2url.decode({
         url: 'http://192.168.50.181/login?redirect=https%3A%2F%2Fwww.mipengine.org%3Fq1%3D1%26q2%3D2',
         query:'redirect'
       });
 
-      expect(res).toBe({
+      expect(res).toEqual({
         target: 'https://www.mipengine.org?q1=1&q2=2',
         source: 'http://192.168.50.181/login'
       });
