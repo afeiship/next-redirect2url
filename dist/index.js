@@ -3,7 +3,7 @@
  * description: Redirect url encode/decode.
  * homepage: https://github.com/afeiship/next-redirect2url
  * version: 1.0.0
- * date: 2020-11-20 22:51:05
+ * date: 2020-11-20 22:52:23
  * license: MIT
  */
 

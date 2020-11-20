@@ -38,5 +38,10 @@
   "dependencies": {
     "@jswork/next-hashlize": "^1.0.0",
     "@jswork/next-param": "^1.0.0"
-  }
+  },
+  "keywords": [
+    "next",
+    "redirect",
+    "url"
+  ]
 }
